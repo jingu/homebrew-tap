@@ -5,21 +5,21 @@
 class Ladle < Formula
   desc "Edit cloud storage files with your local editor"
   homepage "https://github.com/jingu/ladle"
-  version "1.7.0"
+  version "1.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jingu/ladle/releases/download/v1.7.0/ladle_1.7.0_darwin_amd64.tar.gz"
-      sha256 "3cd92e4a82121225bbdfe54e8eec7024e5db27b5080edf4bdcad5ca0808e78ff"
+      url "https://github.com/jingu/ladle/releases/download/v1.8.0/ladle_1.8.0_darwin_amd64.tar.gz"
+      sha256 "e5730bc04515e9e6e482d8920f8945220f67a6bddbc6daadfa315494e4c25d4a"
 
       define_method(:install) do
         bin.install "ladle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jingu/ladle/releases/download/v1.7.0/ladle_1.7.0_darwin_arm64.tar.gz"
-      sha256 "9980fe5ebf3e5b18c150d2bd66a6003c8ad5e1934961d68dacee7ff34de3e1d2"
+      url "https://github.com/jingu/ladle/releases/download/v1.8.0/ladle_1.8.0_darwin_arm64.tar.gz"
+      sha256 "f35e7c1c7d5632c99e90bab5fa079ff633050699b1218f1a5c1ea17b10b4f8ba"
 
       define_method(:install) do
         bin.install "ladle"
@@ -29,15 +29,15 @@ class Ladle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jingu/ladle/releases/download/v1.7.0/ladle_1.7.0_linux_amd64.tar.gz"
-      sha256 "c4afc09acbd6b0c9ef0693a9a2e0b71f80481bbec0fc52e3636848ba53188510"
+      url "https://github.com/jingu/ladle/releases/download/v1.8.0/ladle_1.8.0_linux_amd64.tar.gz"
+      sha256 "b7cfa73edecd0fe4fe1617b14b6321fb55bd4c3c9b0295d58ae99f08f5f06259"
       define_method(:install) do
         bin.install "ladle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jingu/ladle/releases/download/v1.7.0/ladle_1.7.0_linux_arm64.tar.gz"
-      sha256 "525b95530e7381248dd311a0b8f2be17242428369f714f0ac829929d10e7b837"
+      url "https://github.com/jingu/ladle/releases/download/v1.8.0/ladle_1.8.0_linux_arm64.tar.gz"
+      sha256 "34a629ee0b4362ab11173e7e7a8a43e3043dca5a920a4e241a7f93cdf910e67e"
       define_method(:install) do
         bin.install "ladle"
       end
